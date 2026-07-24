@@ -1,4 +1,4 @@
-# OS & Active Directory Portfolio Project
+# OS & Active Directory Project
 
 A hands-on lab demonstrating Windows Server DC setup, Active Directory 
 user/group management, and Group Policy configuration.

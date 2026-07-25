@@ -1,6 +1,6 @@
-# OS & Active Directory Portfolio Project
+# Active Directory Infrastructure Lab
 
-A comprehensive infrastructure project demonstrating network design, Windows Server deployment, 
+Full stack nfrastructure project demonstrating network design, Windows Server deployment, 
 Active Directory administration, and security policy configuration. Combines Cisco Packet Tracer 
 network modeling with real AWS EC2 Active Directory implementation.
 
@@ -21,7 +21,7 @@ network modeling with real AWS EC2 Active Directory implementation.
 ## Skills Demonstrated
 
 - **Networking:** VLAN design, sub-interface routing, DHCP relay, trunk ports
-- **Infrastructure:** OS installation, EC2 configuration, static IP addressing
+- **Infrastructure:** OS installation, EC2 configuration
 - **Active Directory:** DC promotion, OU structure, user/group management
 - **Security:** Group Policy Objects (GPO), password policies, access control
 - **Troubleshooting:** Connectivity validation, DNS verification, policy application
@@ -40,5 +40,6 @@ network modeling with real AWS EC2 Active Directory implementation.
 - Users: 3 (jsmith, jdoe, tadmin)
 - Groups: 2 (SalesTeam, ITTeam)
 - OUs: Sales, IT, Groups
+
 
 <img width="1606" height="289" alt="Screenshot 2026-07-24 at 6 58 28 PM" src="https://github.com/user-attachments/assets/d6ee4bdd-efc4-4ea5-90c3-27101b87fd4c" />

@@ -9,7 +9,7 @@ the Windows Server Active Directory lab environment.
 | 10 | Management | Domain Controller, DNS | 172.31.10.0/24 | DC-Server |
 | 20 | Users | Client machines | 172.31.20.0/24 | Clients |
 
-Vlan 10 Switch Configuration: 
+**Vlan 10 Switch Configuration:**
 
 ```
 Switch Ports Model              SW Version            SW Image
@@ -54,7 +54,7 @@ Building configuration...
 Switch#
 ```
 
-Vlan 20 Switch Configuration: 
+**Vlan 20 Switch Configuration:**
 ```
 Switch Ports Model              SW Version            SW Image
 ------ ----- -----              ----------            ----------
@@ -94,7 +94,7 @@ Building configuration...
 Switch#
 ```
 
-Configuring Router Sub-Interface:
+**Router Sub-Interface Configuration:**
 ```
 Router>enable
 Router#configure terminal
@@ -159,6 +159,9 @@ Router#write memory
 Building configuration...
 [OK]
 Router#
+```
+
+**DC-Server Configuration:**
 ```
 
 ## Design Draft

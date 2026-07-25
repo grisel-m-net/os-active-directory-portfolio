@@ -1,18 +1,14 @@
-# Lab 3: Group Policy & Security
+## Lab 3: Group Policy Configuration
 
-## Objective
-Create and apply Group Policy Object for password security.
+Created GPO "Sales-Password-Policy" on Domain Controller:
+- Minimum password length: 12 characters
+- Password expiration: 90 days
+- Password history: 5 passwords
 
-## GPO Configuration
-- Name: Sales-Password-Policy
-- Applied to: Sales OU
-- Policy settings:
-  - Minimum password length: 12 characters
-  - Password expiration: 90 days
-  - Password history: 5 passwords
+Linked to Sales OU for enforcement.
 
-## Verification
-- GPO linked to Sales OU
-- Client (win-client) domain-joined
-- gpupdate /force applied successfully
-- GPO report confirms policies applied
+<img width="923" height="525" alt="Screenshot 2026-07-24 at 9 26 27 PM" src="https://github.com/user-attachments/assets/2f772de9-17cf-4196-910c-77b149ae7995" />
+
+
+In production, domain-joined clients would receive these policies via gpupdate /force 
+and verify via gpresult /h report.html.

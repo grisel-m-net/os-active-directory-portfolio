@@ -10,6 +10,100 @@ the Windows Server Active Directory lab environment.
 | 10 | Management | Domain Controller, DNS | 172.31.10.0/24 | DC-Server |
 | 20 | Users | Client machines | 172.31.20.0/24 | Clients |
 
+Vlan 10 Configuration: 
+
+```
+Switch Ports Model              SW Version            SW Image
+------ ----- -----              ----------            ----------
+*    1 26    WS-C2960-24TT-L    15.0(2)SE4            C2960-LANBASEK9-M
+
+Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.0(2)SE4, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2013 by Cisco Systems, Inc.
+Compiled Wed 26-Jun-13 02:49 by mnguyen
+
+
+
+Press RETURN to get started!
+
+
+
+Switch>enable
+Switch#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#name management
+                ^
+% Invalid input detected at '^' marker.
+	
+Switch(config)#vlan 10
+Switch(config-vlan)#name managemenr
+Switch(config-vlan)#exit
+Switch(config)#interface range fastethernet 0/1-23
+Switch(config-if-range)#switchport mode access
+Switch(config-if-range)#switchport mode access vlan 10
+                                               ^
+% Invalid input detected at '^' marker.
+	
+Switch(config-if-range)#switchport access vlan 10
+Switch(config-if-range)#exit
+Switch(config)#interface fastethernet 0/24
+Switch(config-if)#switchport mode trunk
+Switch(config-if)#switchport trunk allowed vlan 10,20
+Switch(config-if)#exit
+Switch(config)#exit
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+write memory
+Building configuration...
+[OK]
+Switch#
+```
+Vlan 20 Configuration: 
+```
+Switch Ports Model              SW Version            SW Image
+------ ----- -----              ----------            ----------
+*    1 26    WS-C2960-24TT-L    15.0(2)SE4            C2960-LANBASEK9-M
+
+Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.0(2)SE4, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2013 by Cisco Systems, Inc.
+Compiled Wed 26-Jun-13 02:49 by mnguyen
+
+
+
+Press RETURN to get started!
+
+
+
+Switch>enable
+Switch#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#vlan 20
+Switch(config-vlan)#name Users
+Switch(config-vlan)#exit
+Switch(config)#interfeace range fastethernet 0/1-23
+                     ^
+% Invalid input detected at '^' marker.
+	
+Switch(config)#interface range fastethernet 0/1-23
+Switch(config-if-range)#switchport mode access
+Switch(config-if-range)#switchport access vlan 20
+Switch(config-if-range)#exit
+Switch(config)#interface fastethernet 0/24
+Switch(config-if)#switchport mode trunk
+Switch(config-if)#switchport trunk allowed vlan 10,20
+Switch(config-if)#exit
+Switch(config)#exit
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+write memory
+Building configuration...
+[OK]
+Switch#
+```
+
+
+
 ## Key Design Decisions
 
 - **Sub-interface routing** on core router enables inter-VLAN routing

@@ -1,5 +1,4 @@
-# Network Design & Validation
-
+# Network Design 
 This Cisco Packet Tracer topology models the network infrastructure supporting 
 the Windows Server Active Directory lab environment.
 

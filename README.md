@@ -25,3 +25,5 @@ user/group management, and Group Policy configuration.
 - Domain: corp.local
 - Users: 3 (jsmith, jdoe, tadmin)
 - Groups: 2 (SalesTeam, ITTeam)
+
+<img width="1606" height="289" alt="Screenshot 2026-07-24 at 6 58 28 PM" src="https://github.com/user-attachments/assets/d6ee4bdd-efc4-4ea5-90c3-27101b87fd4c" />

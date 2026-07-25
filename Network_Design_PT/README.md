@@ -21,11 +21,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2013 by Cisco Systems, Inc.
 Compiled Wed 26-Jun-13 02:49 by mnguyen
 
-
-
 Press RETURN to get started!
-
-
 
 Switch>enable
 Switch#configure terminal
@@ -57,6 +53,7 @@ Building configuration...
 [OK]
 Switch#
 ```
+
 Vlan 20 Switch Configuration: 
 ```
 Switch Ports Model              SW Version            SW Image
@@ -68,11 +65,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2013 by Cisco Systems, Inc.
 Compiled Wed 26-Jun-13 02:49 by mnguyen
 
-
-
 Press RETURN to get started!
-
-
 
 Switch>enable
 Switch#configure terminal
@@ -100,9 +93,73 @@ Building configuration...
 [OK]
 Switch#
 ```
+
 Configuring Router Sub-Interface:
+```
+Router>enable
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface fastethernet 0/0.10
+%Invalid interface type and number
+Router(config)#interface fastethernet 0/0.10
+%Invalid interface type and number
+Router(config)#exit
+Router#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Router#show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol 
+GigabitEthernet0/0     unassigned      YES unset  administratively down down 
+GigabitEthernet0/1     unassigned      YES unset  administratively down down 
+GigabitEthernet0/2     unassigned      YES unset  administratively down down 
+Vlan1                  unassigned      YES unset  administratively down down
+Router#configure terminal 
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface GigabitEthernet0/0.10
+Router(config-subif)#encapsulation dot1Q 10
+Router(config-subif)#ip address 172.31.10.1 255.255.255.0
+Router(config-subif)#no shutdown
+Router(config-subif)#exit
+Router(config)#
 
 
+Router con0 is now available
+
+
+Press RETURN to get started.
+
+
+Router>enable
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface Gigabitethernet 0/0.20
+Router(config-subif)#encapsulation dot1Q 20
+Router(config-subif)#ip adress 172.31.20.1 255.255.255.0
+                          ^
+% Invalid input detected at '^' marker.
+	
+Router(config-subif)#ip address 172.31.20.1 255.255.255.0
+Router(config-subif)#no shutdown
+Router(config-subif)#exit
+Router(config)#interface gigabitethernet 0/0
+Router(config-if)#no shutdown
+
+Router(config-if)#
+%LINK-3-UPDOWN: Interface GigabitEthernet0/0, changed state to down
+
+%LINK-3-UPDOWN: Interface GigabitEthernet0/0.10, changed state to down
+
+%LINK-3-UPDOWN: Interface GigabitEthernet0/0.20, changed state to down
+exit
+Router(config)#exit
+Router#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Router#write memory
+Building configuration...
+[OK]
+Router#
+```
 
 ## Design Draft
 

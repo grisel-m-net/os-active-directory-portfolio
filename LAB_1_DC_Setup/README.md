@@ -14,3 +14,4 @@ Install Windows Server 2022 and promote to Active Directory Domain Controller.
 - DC fully operational
 - Domain: corp.local
 - DSRM password configured
+

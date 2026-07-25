@@ -2,14 +2,14 @@
 This Cisco Packet Tracer topology models the network infrastructure supporting 
 the Windows Server Active Directory lab environment.
 
-## VLAN Design
+## VLAN Details
 
 | VLAN | Name | Purpose | Subnet | Devices |
 |------|------|---------|--------|---------|
 | 10 | Management | Domain Controller, DNS | 172.31.10.0/24 | DC-Server |
 | 20 | Users | Client machines | 172.31.20.0/24 | Clients |
 
-Vlan 10 Configuration: 
+Vlan 10 Switch Configuration: 
 
 ```
 Switch Ports Model              SW Version            SW Image
@@ -57,7 +57,7 @@ Building configuration...
 [OK]
 Switch#
 ```
-Vlan 20 Configuration: 
+Vlan 20 Switch Configuration: 
 ```
 Switch Ports Model              SW Version            SW Image
 ------ ----- -----              ----------            ----------
@@ -103,14 +103,14 @@ Switch#
 
 
 
-## Key Design Decisions
+## Design Draft
 
 - **Sub-interface routing** on core router enables inter-VLAN routing
 - **Management VLAN isolated** to reduce exposure of DC and DNS services
 - **DHCP Relay** configured on VLAN 20 to relay client requests to DC DHCP
 - **Trunk ports** allow tagged VLAN traffic between switches and router
 
-## Addressing Strategy
+## Address Scheme
 
 All addressing matches AWS EC2 private IP scheme (172.31.x.x):
 - Router: 172.31.1.1 (gateway)
@@ -129,7 +129,7 @@ All addressing matches AWS EC2 private IP scheme (172.31.x.x):
 - `network_topology.pkt` — Cisco Packet Tracer topology
 - `network_topology.png` — Network diagram export
 
-## Mapping to Real AD Lab
+## Mapping Topology to Real AD Lab
 
 In the actual AWS environment:
 - DC Server runs Windows Server 2022 with Active Directory

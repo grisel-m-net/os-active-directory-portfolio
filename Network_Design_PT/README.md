@@ -162,7 +162,11 @@ Router#
 ```
 
 **DC-Server Configuration:**
-```
+
+<img width="698" height="477" alt="Screenshot 2026-07-25 at 5 37 54 PM" src="https://github.com/user-attachments/assets/a7296d35-e962-4313-b60d-c6cfb958cf24" />
+
+
+
 
 ## Design Draft
 

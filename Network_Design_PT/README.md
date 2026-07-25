@@ -168,7 +168,23 @@ Router#
 
 <img width="698" height="477" alt="Screenshot 2026-07-25 at 5 37 54 PM" src="https://github.com/user-attachments/assets/a7296d35-e962-4313-b60d-c6cfb958cf24" />
 
+**DHCP Relay Configuration:**
 
+```
+Router>enable
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface gigabitethernet 0/0.20
+Router(config-subif)#ip helper-address 172.31.10.2
+Router(config-subif)#exit
+Router(config)#exit
+Router#
+%SYS-5-CONFIG_I: Configured from console by console
+write memory
+Building configuration...
+[OK]
+Router#
+```
 
 
 ## Design Draft
@@ -181,7 +197,7 @@ Router#
 ## Address Scheme
 
 All addressing matches AWS EC2 private IP scheme (172.31.x.x):
-- Router: 172.31.1.1 (gateway)
+- Router: 172.31.10.1/24 (gateway)
 - DC (Management VLAN): 172.31.10.2
 - Clients (User VLAN): 172.31.20.10–20.11
 

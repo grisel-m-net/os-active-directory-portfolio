@@ -1,8 +1,11 @@
 # Network Design 
+
 This Cisco Packet Tracer topology models the network infrastructure supporting 
 the Windows Server Active Directory lab environment.
 
-<img width="987" height="500" alt="Screenshot 2026-07-25 at 5 59 29 PM" src="https://github.com/user-attachments/assets/6cbed739-f3bf-4e0c-9faf-afae3ce9acfc" />
+<img width="987" height="500" alt="Screenshot 2026-07-25 at 5 59 29 PM" src="https://github.com/user-attachments/assets/fb324d74-4f09-4269-aaef-fa456d370546" />
+
+
 
 
 ## VLAN Details

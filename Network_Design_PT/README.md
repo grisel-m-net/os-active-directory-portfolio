@@ -9,8 +9,8 @@ the Windows Server Active Directory lab environment.
 
 | VLAN | Name | Purpose | Subnet | Devices |
 |------|------|---------|--------|---------|
-| 10 | Management | Domain Controller, DNS | 172.31.10.0/24 | DC-Server |
-| 20 | Users | Client machines | 172.31.20.0/24 | Clients |
+| 10 | Management | Domain Controller, DNS | 172.31.10.2 | DC-Server |
+| 20 | Users | Client machines | 172.31.20.10–20.11 | Clients |
 
 **Vlan 10 Switch Configuration:**
 

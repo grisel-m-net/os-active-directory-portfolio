@@ -3,6 +3,7 @@
 This Cisco Packet Tracer topology models the network infrastructure supporting 
 the Windows Server Active Directory lab environment.
 
+
 ## Visual Demonstration of Topology
 
 <img width="987" height="500" alt="Screenshot 2026-07-25 at 5 59 29 PM" src="https://github.com/user-attachments/assets/fb324d74-4f09-4269-aaef-fa456d370546" />
@@ -215,7 +216,7 @@ All addressing matches AWS EC2 private IP scheme (172.31.x.x):
 
 ## Files
 
-- `network_topology.pkt` — Cisco Packet Tracer topology
+- `ad-network-topology.pkt` — Cisco Packet Tracer topology
 
 ## Mapping Topology to Real AD Lab
 

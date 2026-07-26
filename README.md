@@ -1,6 +1,6 @@
 # Active Directory Infrastructure Lab
 
-Full stack nfrastructure project demonstrating network design, Windows Server deployment, 
+Full stack infrastructure project displaying network design, Windows Server deployment, 
 Active Directory administration, and security policy configuration. Combines Cisco Packet Tracer 
 network modeling with real AWS EC2 Active Directory implementation.
 

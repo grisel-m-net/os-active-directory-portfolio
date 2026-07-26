@@ -10,7 +10,7 @@ Install Windows Server 2022 and promote to Active Directory Domain Controller.
 4. Promoted server to Domain Controller (corp.local forest)
 5. Verified AD installation with PowerShell
 
-## Deliverables
+## Results
 - DC fully operational
 - Domain: corp.local
 - DSRM password configured

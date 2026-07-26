@@ -41,5 +41,6 @@ network modeling with real AWS EC2 Active Directory implementation.
 - Groups: 2 (SalesTeam, ITTeam)
 - OUs: Sales, IT, Groups
 
+<img width="788" height="339" alt="Screenshot 2026-07-26 at 1 32 24 PM" src="https://github.com/user-attachments/assets/736ccdae-8829-428d-be3d-8cad30ef2661" />
 
 <img width="1606" height="289" alt="Screenshot 2026-07-24 at 6 58 28 PM" src="https://github.com/user-attachments/assets/d6ee4bdd-efc4-4ea5-90c3-27101b87fd4c" />

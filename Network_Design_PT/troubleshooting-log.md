@@ -1,19 +1,22 @@
 # VLAN Routing Troubleshooting Log
 
-*Cisco Packet Tracer Lab — Core Router / VLAN10 & VLAN20 Switches*
+*Cisco Packet Tracer Lab: Core Router / VLAN10 & VLAN20 Switches*
 
 ## 1. Issue Summary
 
-The VLAN10-Switch was not routing properly. In the logical topology, the link between the Core Router (Cisco 2911) and the 2960-24TT VLAN10-Switch displayed a red down-arrow in Packet Tracer, while all other links in the topology showed green (up).
+The VLAN10-Switch was not routing properly. In the logical topology, the link between the Core Router (Cisco 2911) and the VLAN10-Switch (2960-24TT) displayed a red down-arrow in Packet Tracer, while all other links in the topology showed green (up).
+
+<img width="437" height="362" alt="image" src="https://github.com/user-attachments/assets/27fc896e-3bf7-4a37-ba2f-84a067fb2da3" />
+
 
 ## 2. Environment
 
 - **Core Router:** Cisco 2911, subinterfaces configured for router-on-a-stick (Gi0/0.10 = 172.31.10.1/24, Gi0/0.20 = 172.31.20.1/24)
 - **VLAN10-Switch:** Cisco WS-C2960-24TT-L, IOS 15.0(2)SE4
 - **VLAN20-Switch:** Cisco WS-C2960-24TT-L, IOS 15.0(2)SE4
-- **End devices:** Server-PT (off VLAN10-Switch), PC-Client-1 and PC-Client-2 (off VLAN20-Switch)
+- **End devices:** Server-PT (connection: VLAN10-Switch), PC-Client-1 and PC-Client-2 (connection: VLAN20-Switch)
 
-## 3. Diagnostic Steps and Findings
+## 3. Diagnosis 
 
 | Step | Symptom / Command | Finding |
 |---|---|---|
@@ -23,6 +26,9 @@ The VLAN10-Switch was not routing properly. In the logical topology, the link be
 | 4 | Physical/port-status panel on Core Router | Only one physical link existed from the router at all, terminating on VLAN20-Switch (Gi0/1) — no direct router-to-VLAN10-Switch cable was ever present. |
 | 5 | Port table / `show running-config` on VLAN20-Switch | GigabitEthernet0/1 (link to router) had no trunk configuration — passing only default VLAN 1. |
 | 6 | `%CDP-4-NATIVE_VLAN_MISMATCH` console message | An unintended cable connected VLAN20-Switch Fa0/4 (native VLAN 20) to VLAN10-Switch Fa0/1 (native VLAN 10) — leftover/incorrect link, not part of the intended design. |
+
+<img width="692" height="463" alt="image" src="https://github.com/user-attachments/assets/817ab989-930d-4aab-85ab-5451054f431f" />
+
 
 ## 4. Root Causes Identified
 

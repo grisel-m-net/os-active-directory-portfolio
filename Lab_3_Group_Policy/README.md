@@ -7,6 +7,8 @@ Created GPO "Sales-Password-Policy" on Domain Controller:
 
 Linked to Sales OU for enforcement.
 
+## Screenshots 
+
 <img width="923" height="525" alt="Screenshot 2026-07-24 at 9 26 27 PM" src="https://github.com/user-attachments/assets/2f772de9-17cf-4196-910c-77b149ae7995" />
 
 
